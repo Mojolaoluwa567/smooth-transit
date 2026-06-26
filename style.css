@@ -3079,6 +3079,10 @@ a.cinfo-card:hover .cinfo-arrow {
 }
 
 @media (max-width: 600px) {
+  .cursor-circle {
+    display: none;
+  }
+
   .benefits-inner {
     grid-template-columns: 1fr;
   }
