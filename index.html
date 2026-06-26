@@ -1,0 +1,847 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Smooth Transit Global</title>
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
+    />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  </head>
+  <body>
+    <!-- ══════ HEADER ══════ -->
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo"
+          ><img src="img/Group 2.png" alt="Smooth Transit Global"
+        /></a>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="hdr-cta">
+            <span>Get a Quote</span>
+            <i data-lucide="arrow-right" class="hdr-arrow"></i>
+          </a>
+          <button class="burger" id="burger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="mob-cta">Get a Quote</a>
+      </div>
+    </header>
+
+    <main data-scroll-container id="scroll-container">
+      <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+      <section class="hero" id="home" data-scroll-section>
+        <canvas id="gridCanvas"></canvas>
+
+        <div class="hero-top">
+          <h1 class="hero-headline">
+            <span class="line-wrap" data-scroll data-scroll-speed=""
+              ><span class="line-inner">Your Trusted</span></span
+            >
+            <span class="line-wrap" data-scroll data-scroll-speed=""
+              ><span class="line-inner blue-word">Partner</span></span
+            >
+            <span class="line-wrap" data-scroll data-scroll-speed=""
+              ><span class="line-inner">in Aviation</span></span
+            >
+            <span class="line-wrap" data-scroll data-scroll-speed=""
+              ><span class="line-inner red-word">&amp; Travel.</span></span
+            >
+          </h1>
+        </div>
+
+        <div class="hero-mid">
+          <p class="hero-sub" data-scroll data-scroll-speed="0.2">
+            From flight booking to VIP protocol, visa facilitation, and full
+            aviation logistics — we handle every detail so you fly smarter.
+          </p>
+        </div>
+
+        <div class="hero-img-wrap">
+          <img
+            src="img/charlotte-noelle-98WPMlTl5xo-unsplash.jpg"
+            alt="Hero"
+            class="hero-bg-img"
+          />
+        </div>
+        <div class="hero-ctas">
+          <a href="services.html" class="btn-primary">Explore Services</a>
+          <a href="contact.html" class="btn-ghost">Talk to Us</a>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       CLIENT LOGOS
+  ══════════════════════════════════════════ -->
+      <section class="clients" data-scroll-section>
+        <div class="clients-label">Trusted by</div>
+        <div class="clients-track" id="clientsTrack">
+          <img src="img/bat.png" alt="BAT" />
+          <img src="img/coke.png" alt="Coca-Cola" />
+          <img src="img/mantrac.png" alt="Mantrac" />
+          <img src="img/multichoice.png" alt="MultiChoice" />
+          <img src="img/guiness.png" alt="Guinness" />
+          <img src="img/sapl.png" alt="SAPL" />
+          <img src="img/fedex.png" alt="FedEx" />
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       ABOUT / INTRO
+  ══════════════════════════════════════════ -->
+      <section class="intro-section" data-scroll-section>
+        <div class="intro-inner">
+          <div class="intro-left" data-scroll data-scroll-speed="-0.2">
+            <div class="section-eyebrow">Who We Are</div>
+            <h2 class="intro-headline">
+              Precision.<br /><em>Confidentiality.</em><br />Global Reach.
+            </h2>
+            <div class="intro-divider"></div>
+            <p class="intro-body">
+              Smooth Transit Global Services is a leading aviation consulting
+              firm with extensive expertise in international and domestic
+              travel. We specialize in personalized, high-level aviation support
+              for individuals, corporate bodies, and government institutions.
+            </p>
+            <p class="intro-body">
+              From ticket procurement and visa facilitation to full-scale
+              aviation logistics and VIP protocol services — every journey
+              handled professionally, start to finish.
+            </p>
+            <a
+              href="about.html"
+              class="btn-primary"
+              style="
+                margin-top: 2rem;
+                display: inline-flex;
+                gap: 0.5rem;
+                align-items: center;
+              "
+            >
+              About Us <i data-lucide="arrow-right" style="width: 15px"></i>
+            </a>
+          </div>
+
+          <div class="intro-right" data-scroll data-scroll-speed="0.2">
+            <div class="intro-img-grid">
+              <div class="iig-main">
+                <img
+                  src="img/1.jpg"
+                  alt="Aviation consulting"
+                  data-scroll
+                  data-scroll-speed="-0.3"
+                />
+              </div>
+              <div class="iig-side">
+                <div class="iig-side-top">
+                  <img
+                    src="img/2.jpg"
+                    alt="VIP service"
+                    data-scroll
+                    data-scroll-speed="-0.5"
+                  />
+                </div>
+                <div class="iig-kpi">
+                  <span class="kpi-n">8<sup>+</sup></span>
+                  <span class="kpi-l">Service verticals</span>
+                </div>
+              </div>
+            </div>
+            <div class="iig-bottom">
+              <img
+                src="img/3.jpg"
+                alt="Ground handling"
+                data-scroll
+                data-scroll-speed="-0.15"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SERVICES SHOWCASE
+  ══════════════════════════════════════════ -->
+      <section class="services-showcase" data-scroll-section>
+        <div class="ss-header">
+          <div class="section-eyebrow" data-scroll data-scroll-speed="0.3">
+            What We Do
+          </div>
+          <h2 class="ss-title" data-scroll data-scroll-speed="0.2">
+            Complete Aviation <em>Solutions</em>
+          </h2>
+          <a href="services.html" class="ss-all-link"
+            >View All Services
+            <i
+              data-lucide="arrow-right"
+              style="width: 13px; display: inline-block; vertical-align: middle"
+            ></i
+          ></a>
+        </div>
+        <div class="ss-slider" id="ssSlider">
+          <div
+            class="ss-slide active"
+            style="--bg: url(&quot;img/flight.jpg&quot;)"
+          >
+            <div class="ss-slide-content">
+              <span class="ss-num">01</span>
+              <h3>Flight &amp; Travel Management</h3>
+              <p>
+                Ticketing, reservations, over-flight permits, landing
+                permissions, hotel &amp; car hire for individuals and
+                corporates.
+              </p>
+              <a href="services.html" class="ss-read"
+                >Read More
+                <i
+                  data-lucide="arrow-right"
+                  style="
+                    width: 13px;
+                    display: inline-block;
+                    vertical-align: middle;
+                  "
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="ss-slide"
+            style="--bg: url(&quot;img/meet-assit.jpg&quot;)"
+          >
+            <div class="ss-slide-content">
+              <span class="ss-num">02</span>
+              <h3>VIP Protocol &amp; Meet-and-Assist</h3>
+              <p>
+                Premium travel coordination for ambassadors, executives,
+                government officials, traditional rulers, and clergy.
+              </p>
+              <a href="services.html" class="ss-read"
+                >Read More
+                <i
+                  data-lucide="arrow-right"
+                  style="
+                    width: 13px;
+                    display: inline-block;
+                    vertical-align: middle;
+                  "
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div class="ss-slide" style="--bg: url(&quot;img/security.jpg&quot;)">
+            <div class="ss-slide-content">
+              <span class="ss-num">03</span>
+              <h3>Security &amp; Executive Escort</h3>
+              <p>
+                Armed personalized escorts safely transferring passengers
+                between airports, residences, and offices.
+              </p>
+              <a href="services.html" class="ss-read"
+                >Read More
+                <i
+                  data-lucide="arrow-right"
+                  style="
+                    width: 13px;
+                    display: inline-block;
+                    vertical-align: middle;
+                  "
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div
+            class="ss-slide"
+            style="--bg: url(&quot;img/logistics.jpg&quot;)"
+          >
+            <div class="ss-slide-content">
+              <span class="ss-num">04</span>
+              <h3>Aviation Logistics &amp; Ground Operations</h3>
+              <p>
+                Flight planning, ground handling, cargo services, crew
+                transportation, and aircraft charter service.
+              </p>
+              <a href="services.html" class="ss-read"
+                >Read More
+                <i
+                  data-lucide="arrow-right"
+                  style="
+                    width: 13px;
+                    display: inline-block;
+                    vertical-align: middle;
+                  "
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div class="ss-arrows">
+            <button class="ss-arr ss-prev" id="ssPrev">
+              <i data-lucide="arrow-left"></i>
+            </button>
+            <div class="ss-pips" id="ssPips">
+              <span class="ss-pip active"></span><span class="ss-pip"></span
+              ><span class="ss-pip"></span><span class="ss-pip"></span>
+            </div>
+            <button class="ss-arr ss-next" id="ssNext">
+              <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       WHY CHOOSE US — REDESIGNED (replaces horizontal track)
+  ══════════════════════════════════════════ -->
+      <section class="why-new" id="why" data-scroll-section>
+        <!-- Background number -->
+        <div class="why-new-bg-text" data-scroll data-scroll-speed="-0.4">
+          WHY
+        </div>
+
+        <div class="why-new-inner">
+          <!-- Left: sticky header -->
+          <div
+            class="why-new-left"
+            data-scroll
+            data-scroll-sticky
+            data-scroll-target="#why"
+          >
+            <div class="section-eyebrow">Why Choose Us</div>
+            <h2 class="why-new-title">
+              The Smooth<br />Transit<br /><em>Difference</em>
+            </h2>
+            <p class="why-new-sub">
+              Four commitments that set us apart — and keep our clients coming
+              back.
+            </p>
+            <div class="why-new-counter">
+              <span class="wnc-active" id="whyNewActive">01</span>
+              <span class="wnc-sep">/</span>
+              <span class="wnc-total">04</span>
+            </div>
+            <a href="about.html" class="btn-primary why-new-cta">
+              Learn More <i data-lucide="arrow-right" style="width: 14px"></i>
+            </a>
+          </div>
+
+          <!-- Right: scrolling cards -->
+          <div class="why-new-right">
+            <div class="why-card-item" data-index="1">
+              <div class="wci-head">
+                <div class="wci-num">01</div>
+                <div class="wci-icon blue-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+              </div>
+              <h3 class="wci-title">24/7 Professional Assistance</h3>
+              <p class="wci-body">
+                Our expert consultants are available around the clock — any
+                hour, any day. We act swiftly with direct communication channels
+                and proactive travel oversight that eliminates uncertainty and
+                delays.
+              </p>
+              <div class="wci-tags">
+                <span>Direct Channels</span><span>Rapid Response</span
+                ><span>Zero Delays</span>
+              </div>
+              <div class="wci-stat">
+                <span class="wci-stat-n">24<small>/7</small></span>
+                <span class="wci-stat-l">Operational Coverage</span>
+              </div>
+              <div class="wci-img">
+                <img src="img/Image_fx (5).jpg" alt="24/7 assistance" />
+                <span class="wci-img-tag">24 / 7</span>
+              </div>
+            </div>
+
+            <div class="why-card-item" data-index="2">
+              <div class="wci-head">
+                <div class="wci-num">02</div>
+                <div class="wci-icon red-icon"><i data-lucide="lock"></i></div>
+              </div>
+              <h3 class="wci-title">Strict Confidentiality</h3>
+              <p class="wci-body">
+                Every itinerary and movement is handled with structured
+                discretion. We operate to the highest confidentiality standards,
+                safeguarding sensitive travel details and all diplomatic
+                arrangements.
+              </p>
+              <div class="wci-tags">
+                <span>Executive Privacy</span><span>Diplomatic Protocols</span
+                ><span>Data Security</span>
+              </div>
+              <div class="wci-stat">
+                <span class="wci-stat-n">100<small>%</small></span>
+                <span class="wci-stat-l">Data Privacy</span>
+              </div>
+              <div class="wci-img">
+                <img
+                  src="img/businessman-using-mobile-phone-waiting-area-airport-terminal.jpg"
+                  alt="Confidentiality"
+                />
+                <span class="wci-img-tag">100%</span>
+              </div>
+            </div>
+
+            <div class="why-card-item" data-index="3">
+              <div class="wci-head">
+                <div class="wci-num">03</div>
+                <div class="wci-icon blue-icon"><i data-lucide="zap"></i></div>
+              </div>
+              <h3 class="wci-title">Rapid Execution</h3>
+              <p class="wci-body">
+                We respond to requests in under five minutes. Real-time aviation
+                intelligence is continuously monitored, enhancing cost
+                efficiency and executive comfort from departure to arrival.
+              </p>
+              <div class="wci-tags">
+                <span>Live Tracking</span><span>Real-Time Updates</span
+                ><span>Cost Efficiency</span>
+              </div>
+              <div class="wci-stat">
+                <span class="wci-stat-n">&lt;5<small>min</small></span>
+                <span class="wci-stat-l">Avg Response Time</span>
+              </div>
+              <div class="wci-img">
+                <img
+                  src="img/smiling-customer-service-agent.jpg"
+                  alt="Rapid response"
+                />
+                <span class="wci-img-tag">&lt;5 min</span>
+              </div>
+            </div>
+
+            <div class="why-card-item" data-index="4">
+              <div class="wci-head">
+                <div class="wci-num">04</div>
+                <div class="wci-icon red-icon"><i data-lucide="scale"></i></div>
+              </div>
+              <h3 class="wci-title">Unbiased Travel Advice</h3>
+              <p class="wci-body">
+                Every recommendation is aligned strictly with your operational
+                goals — never with commission structures or preferred vendors.
+                Independent counsel you can trust to serve your mission, not
+                ours.
+              </p>
+              <div class="wci-tags">
+                <span>Independent</span><span>Goal-Aligned</span
+                ><span>Mission-First</span>
+              </div>
+              <div class="wci-stat">
+                <span class="wci-stat-n">Zero</span>
+                <span class="wci-stat-l">Vendor Bias</span>
+              </div>
+              <div class="wci-img">
+                <img
+                  src="img/medium-shot-people-travel-agency-office.jpg"
+                  alt="Unbiased advice"
+                />
+                <span class="wci-img-tag">Zero Bias</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       BENEFITS / VALUE PROPS
+  ══════════════════════════════════════════ -->
+      <section class="benefits-strip" data-scroll-section>
+        <div class="benefits-inner">
+          <div class="benefit-item" data-scroll data-scroll-speed="0.1">
+            <div class="benefit-icon">
+              <i data-lucide="badge-dollar-sign"></i>
+            </div>
+            <div class="benefit-text">
+              <strong>Best Value for Money</strong>
+              <span
+                >We always assist clients in securing the most competitive
+                rates.</span
+              >
+            </div>
+          </div>
+          <div class="benefit-item" data-scroll data-scroll-speed="0.2">
+            <div class="benefit-icon"><i data-lucide="compass"></i></div>
+            <div class="benefit-text">
+              <strong>Personal Travel Guides</strong>
+              <span
+                >Our consultants advise you on all options — better than going
+                direct.</span
+              >
+            </div>
+          </div>
+          <div class="benefit-item" data-scroll data-scroll-speed="0.3">
+            <div class="benefit-icon"><i data-lucide="timer"></i></div>
+            <div class="benefit-text">
+              <strong>Huge Time Savings</strong>
+              <span
+                >Expertise and prompt service translates to fewer delays and
+                less stress.</span
+              >
+            </div>
+          </div>
+          <div class="benefit-item" data-scroll data-scroll-speed="0.4">
+            <div class="benefit-icon"><i data-lucide="building-2"></i></div>
+            <div class="benefit-text">
+              <strong>Corporate Office Setup</strong>
+              <span
+                >We can set up and manage a full logistics &amp; travel office
+                for your company.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       PROCESS / HOW IT WORKS
+  ══════════════════════════════════════════ -->
+      <section class="process-section" data-scroll-section>
+        <div class="process-inner">
+          <div class="process-header" data-scroll data-scroll-speed="0.2">
+            <div class="section-eyebrow">How It Works</div>
+            <h2 class="process-title">
+              Your Journey,<br /><em>Simplified</em>
+            </h2>
+          </div>
+          <div class="process-steps">
+            <div class="process-step" data-scroll data-scroll-speed="0.1">
+              <div class="ps-num blue-num">01</div>
+              <div class="ps-icon"><i data-lucide="phone-call"></i></div>
+              <h3>Contact Us</h3>
+              <p>
+                Reach out by call, email or our quick form. We respond in under
+                5 minutes — day or night.
+              </p>
+              <div class="ps-connector"></div>
+            </div>
+            <div class="process-step" data-scroll data-scroll-speed="0.2">
+              <div class="ps-num red-num">02</div>
+              <div class="ps-icon"><i data-lucide="clipboard-list"></i></div>
+              <h3>We Plan It</h3>
+              <p>
+                Our consultants design your complete travel itinerary, handling
+                every permit, visa and detail.
+              </p>
+              <div class="ps-connector"></div>
+            </div>
+            <div class="process-step" data-scroll data-scroll-speed="0.3">
+              <div class="ps-num blue-num">03</div>
+              <div class="ps-icon"><i data-lucide="plane-takeoff"></i></div>
+              <h3>You Fly</h3>
+              <p>
+                Sit back. Our protocol team meets you at the airport and manages
+                every step of your journey.
+              </p>
+              <div class="ps-connector"></div>
+            </div>
+            <div class="process-step" data-scroll data-scroll-speed="0.4">
+              <div class="ps-num red-num">04</div>
+              <div class="ps-icon"><i data-lucide="map-pin-check"></i></div>
+              <h3>Safe Arrival</h3>
+              <p>
+                From tarmac to destination — security escort, ground transport
+                and hotel all pre-arranged.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       TESTIMONIAL / QUOTE BREAK
+  ══════════════════════════════════════════ -->
+      <section class="quote-section" data-scroll-section>
+        <div class="quote-inner">
+          <div class="quote-icon" data-scroll data-scroll-speed="0.3">
+            <i data-lucide="quote"></i>
+          </div>
+          <blockquote class="quote-text" data-scroll data-scroll-speed="0.15">
+            We provide a very personal and professional service to all our
+            clients, under strict confidentiality — always assisting in getting
+            the best value for money.
+          </blockquote>
+          <cite class="quote-source">Smooth Transit Global Services</cite>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       CORPORATE STRIP
+  ══════════════════════════════════════════ -->
+      <section class="corporate-strip" data-scroll-section>
+        <div class="corp-strip-inner">
+          <div class="corp-strip-left" data-scroll data-scroll-speed="0.15">
+            <div class="section-eyebrow">For Organisations</div>
+            <h2 class="corp-strip-title">
+              A Dedicated<br /><em>Travel Office</em><br />for Your Company
+            </h2>
+            <p>
+              We set up a comprehensive Logistics, Protocol and Travelling
+              Office — fully managed on an outsourcing basis so your team
+              focuses on what matters.
+            </p>
+            <a
+              href="services.html#corporate"
+              class="btn-primary"
+              style="
+                margin-top: 2rem;
+                display: inline-flex;
+                gap: 0.5rem;
+                align-items: center;
+              "
+            >
+              Corporate Solutions
+              <i data-lucide="arrow-right" style="width: 14px"></i>
+            </a>
+          </div>
+          <div class="corp-strip-right" data-scroll data-scroll-speed="-0.1">
+            <div class="corp-feat-list">
+              <div class="corp-feat">
+                <div class="cf-ico blue-ico-sm">
+                  <i data-lucide="layout-dashboard"></i>
+                </div>
+                <div>
+                  <strong>Full Infrastructure Setup</strong>
+                  <span
+                    >Complete travel &amp; logistics office built to your
+                    operations</span
+                  >
+                </div>
+              </div>
+              <div class="corp-feat">
+                <div class="cf-ico red-ico-sm"><i data-lucide="users"></i></div>
+                <div>
+                  <strong>Outsourced Management</strong>
+                  <span
+                    >Our experienced team runs your travel office
+                    end-to-end</span
+                  >
+                </div>
+              </div>
+              <div class="corp-feat">
+                <div class="cf-ico blue-ico-sm">
+                  <i data-lucide="trending-down"></i>
+                </div>
+                <div>
+                  <strong>Measurable Cost Savings</strong>
+                  <span
+                    >Industry relationships consistently deliver competitive
+                    rates</span
+                  >
+                </div>
+              </div>
+              <div class="corp-feat">
+                <div class="cf-ico red-ico-sm">
+                  <i data-lucide="shield-check"></i>
+                </div>
+                <div>
+                  <strong>Unbiased Advisory</strong>
+                  <span
+                    >No airline bias — always the best arrangement for your
+                    mission</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER (original kept exactly) -->
+      <footer class="site-footer" id="site-footer" data-scroll-section>
+        <div class="footer-glow" id="footer-glow"></div>
+        <div class="footer-watermark">Smooth Transit</div>
+        <div class="footer-cta">
+          <div class="footer-divider-line"></div>
+          <h2 class="cta-heading">
+            <span class="word">Ready</span> <span class="word">to</span>
+            <span class="word">fly</span><br />
+            <span class="line-accent"><span class="word">smarter?</span></span>
+          </h2>
+          <div class="cta-right">
+            <p class="cta-sub">
+              From executive travel to full aviation logistics — we handle every
+              detail, at any hour.
+            </p>
+            <div class="cta-btn-wrap" id="cta-btn-wrap">
+              <a href="contact.html" class="cta-btn">
+                <span>Get in Touch</span>
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 8h10M9 4l4 4-4 4" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col footer-col--brand">
+            <div class="brand-logo">
+              <span class="brand-logo-dot"></span>Smooth Transit Global
+            </div>
+            <p class="brand-desc">
+              A leading aviation consulting firm delivering precision travel
+              solutions for executives, diplomats, and corporations across the
+              globe.
+            </p>
+            <div class="social-row">
+              <a href="#" class="social-link">in</a>
+              <a href="#" class="social-link">𝕏</a>
+              <a href="#" class="social-link">ig</a>
+              <a href="#" class="social-link">fb</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Services</p>
+            <ul class="col-links">
+              <li><a href="services.html">Flight &amp; Ticketing</a></li>
+              <li><a href="services.html">VIP Protocol</a></li>
+              <li><a href="services.html">Meet &amp; Assist</a></li>
+              <li><a href="services.html">Security Escort</a></li>
+              <li><a href="services.html">Aviation Logistics</a></li>
+              <li><a href="services.html">Hotel &amp; Car Hire</a></li>
+              <li><a href="services.html">Visa Facilitation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Company</p>
+            <ul class="col-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="#why">Why Choose Us</a></li>
+              <li><a href="about.html#clientele">Our Clients</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Contact</p>
+            <div class="contact-item">
+              <p class="contact-item-label">Phone</p>
+              <a href="tel:+234XXXXXXXXXX" class="contact-item-val"
+                >+234 XXX XXXX XXXX</a
+              >
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Email</p>
+              <a href="mailto:info@smoothtransit.com" class="contact-item-val"
+                >info@smoothtransit.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Location</p>
+              <span class="contact-item-val">Lagos, Nigeria</span>
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Operations</p>
+              <span
+                class="contact-item-val"
+                style="color: rgba(26, 111, 232, 0.9); font-weight: 600"
+                >24 / 7 — Always On</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-ticker">
+          <div class="ticker-track" id="ticker-track">
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Flight Management</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>VIP Protocol Services</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>24/7 Operations</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Executive Aviation</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Diplomatic Travel</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Ground Logistics</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Confidential &amp; Discreet</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Global Reach</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Flight Management</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>VIP Protocol Services</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>24/7 Operations</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Executive Aviation</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Diplomatic Travel</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Ground Logistics</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Confidential &amp; Discreet</span
+            >
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Global Reach</span
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            © <span id="footer-year">2025</span> Smooth Transit Global Services.
+            <span>All rights reserved.</span>
+          </p>
+          <div class="flight-path">
+            <span class="flight-icon">✈</span
+            ><span>Lagos · London · Dubai · New York</span>
+          </div>
+          <nav class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Policy</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+
+    <div class="custom-scrollbar">
+      <div class="custom-scrollbar-thumb" id="scrollThumb"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

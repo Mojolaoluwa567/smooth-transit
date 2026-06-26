@@ -1,0 +1,1466 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | Smooth Transit Global</title>
+    <link rel="shortcut icon" href="img/Favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+      .about-hero-content .page-hero-title em {
+        color: #1a6fe8;
+      }
+      .story-section {
+        padding: 8rem 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1.6fr;
+        gap: 8rem;
+        align-items: start;
+        background: #fff;
+      }
+      .story-sticky {
+        position: sticky;
+        top: 7rem;
+      }
+      .story-side-title {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: -0.04em;
+        color: var(--black);
+        margin-bottom: 2rem;
+      }
+      .story-side-title em {
+        font-style: italic;
+        color: var(--blue);
+        font-weight: 400;
+      }
+      .story-pillars {
+        margin-top: 2.5rem;
+      }
+      .story-pillar {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 0;
+        border-top: 1px solid var(--gray-lt);
+      }
+      .sp-ico {
+        width: 34px;
+        height: 34px;
+        background: var(--off-white);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: var(--blue);
+      }
+      .sp-ico i[data-lucide] {
+        width: 17px;
+        height: 17px;
+      }
+      .sp-txt {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--black);
+      }
+      .story-lead {
+        font-size: 1.35rem;
+        font-weight: 700;
+        line-height: 1.5;
+        color: var(--black);
+        letter-spacing: -0.02em;
+        margin-bottom: 2rem;
+      }
+      .story-lead .blue {
+        color: var(--blue);
+      }
+      .story-body {
+        font-size: 0.95rem;
+        line-height: 1.95;
+        color: var(--gray);
+        margin-bottom: 1.5rem;
+      }
+      .story-highlight {
+        background: #001f6b;
+        border-radius: 10px;
+        padding: 2.5rem;
+        margin: 2.5rem 0;
+        border-left: 4px solid var(--red);
+        position: relative;
+        overflow: hidden;
+      }
+      .story-highlight::after {
+        content: '"';
+        position: absolute;
+        right: 2rem;
+        top: -1rem;
+        font-size: 8rem;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.04);
+        line-height: 1;
+        pointer-events: none;
+      }
+      .story-highlight p {
+        font-size: 1.05rem;
+        font-weight: 500;
+        font-style: italic;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.8);
+        margin: 0;
+      }
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--gray-lt);
+        border-top: 1px solid var(--gray-lt);
+        border-bottom: 1px solid var(--gray-lt);
+      }
+      .astat {
+        background: #fff;
+        padding: 3.5rem 2.5rem;
+        text-align: center;
+      }
+      .astat-n {
+        font-size: 3.2rem;
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        line-height: 1;
+        color: var(--blue);
+        margin-bottom: 0.6rem;
+      }
+      .astat-n .r {
+        color: var(--red);
+      }
+      .astat-l {
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gray);
+      }
+      .about-why {
+        padding: 8rem 6rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+      }
+      .about-why-title {
+        font-size: clamp(2rem, 3.5vw, 3.2rem);
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
+        color: var(--black);
+        margin-bottom: 1rem;
+      }
+      .about-why-title .r {
+        color: var(--red);
+      }
+      .about-why-sub {
+        font-size: 0.92rem;
+        color: var(--gray);
+        line-height: 1.85;
+        margin-bottom: 2.5rem;
+      }
+      .why-quad {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--gray-lt);
+      }
+      .wq-item {
+        background: #fff;
+        padding: 2rem;
+        transition: background 0.25s;
+      }
+      .wq-item:hover {
+        background: var(--off-white);
+      }
+      .wq-ico {
+        width: 36px;
+        height: 36px;
+        background: var(--off-white);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.9rem;
+        color: var(--blue);
+      }
+      .wq-ico i[data-lucide] {
+        width: 18px;
+        height: 18px;
+      }
+      .wq-title {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 0.4rem;
+      }
+      .wq-body {
+        font-size: 0.76rem;
+        line-height: 1.7;
+        color: var(--gray);
+      }
+      .about-why-card {
+        background: #001f6b;
+        border-radius: 14px;
+        padding: 3.5rem 2.5rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .about-why-card::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--red), var(--blue));
+      }
+      .about-why-card::after {
+        content: "";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(0, 71, 204, 0.45) 0%,
+          transparent 70%
+        );
+      }
+      .awc-label {
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 1.25rem;
+      }
+      .awc-title {
+        font-size: 1.7rem;
+        font-weight: 800;
+        line-height: 1.3;
+        color: #fff;
+        margin-bottom: 2rem;
+        letter-spacing: -0.02em;
+      }
+      .awc-title span {
+        color: var(--red);
+      }
+      .awc-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      .awc-list li {
+        font-size: 0.83rem;
+        color: rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: flex-start;
+        gap: 0.75rem;
+        line-height: 1.5;
+      }
+      .awc-list li i[data-lucide] {
+        width: 14px;
+        height: 14px;
+        color: var(--red);
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+      }
+      .clientele-section {
+        background: var(--black);
+        padding: 8rem 6rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .clientele-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--red) 50%,
+          transparent
+        );
+      }
+      .cl-bg-word {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18vw;
+        font-weight: 900;
+        color: rgba(255, 255, 255, 0.015);
+        letter-spacing: -0.05em;
+        pointer-events: none;
+        white-space: nowrap;
+        user-select: none;
+      }
+      .cl-header {
+        text-align: center;
+        margin-bottom: 5rem;
+        position: relative;
+        z-index: 2;
+      }
+      .cl-eyebrow {
+        font-size: 0.62rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75rem;
+      }
+      .cl-title {
+        font-size: clamp(2.5rem, 5vw, 4.5rem);
+        font-weight: 900;
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        color: #fff;
+      }
+      .cl-title .r {
+        color: var(--red);
+      }
+      .cl-title .b {
+        color: #4d8aff;
+      }
+      .cl-sub {
+        font-size: 0.92rem;
+        color: rgba(255, 255, 255, 0.38);
+        max-width: 460px;
+        margin: 1.25rem auto 0;
+        line-height: 1.85;
+      }
+      .marquee-wrap {
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 2rem;
+      }
+      .marquee-wrap::before,
+      .marquee-wrap::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100px;
+        z-index: 3;
+        pointer-events: none;
+      }
+      .marquee-wrap::before {
+        left: 0;
+        background: linear-gradient(90deg, var(--black), transparent);
+      }
+      .marquee-wrap::after {
+        right: 0;
+        background: linear-gradient(-90deg, var(--black), transparent);
+      }
+      .m-track {
+        display: flex;
+        gap: 2rem;
+        width: max-content;
+        animation: mLeft 28s linear infinite;
+      }
+      .m-track.rev {
+        animation: mRight 35s linear infinite;
+      }
+      @keyframes mLeft {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes mRight {
+        from {
+          transform: translateX(-50%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+      .m-chip {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 100px;
+        padding: 0.55rem 1.3rem;
+        flex-shrink: 0;
+      }
+      .m-chip-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--red);
+        flex-shrink: 0;
+      }
+      .m-chip span {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.65);
+        white-space: nowrap;
+      }
+      .cl-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+      .cl-card {
+        background: var(--black);
+        padding: 2.5rem 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: background 0.25s;
+        cursor: default;
+      }
+      .cl-card:hover {
+        background: #0c1220;
+      }
+      .cl-card::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 0;
+        background: var(--red);
+        transition: height 0.25s;
+      }
+      .cl-card:hover::after {
+        height: 2px;
+      }
+      .cc-badge {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.25rem;
+      }
+      .cc-badge i[data-lucide] {
+        width: 22px;
+        height: 22px;
+      }
+      .cc-name {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.3rem;
+      }
+      .cc-type {
+        font-size: 0.62rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.22);
+        margin-bottom: 1rem;
+      }
+      .cc-svc {
+        font-size: 0.74rem;
+        color: rgba(255, 255, 255, 0.4);
+        line-height: 1.65;
+      }
+      .sector-strip {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-top: 4rem;
+        position: relative;
+        z-index: 2;
+      }
+      .sector-box {
+        border: 1px solid rgba(255, 255, 255, 0.07);
+        border-radius: 10px;
+        padding: 2rem 1.5rem;
+        transition: border-color 0.25s;
+      }
+      .sector-box:hover {
+        border-color: rgba(255, 255, 255, 0.15);
+      }
+      .sb-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .sb-icon i[data-lucide] {
+        width: 20px;
+        height: 20px;
+      }
+      .sb-name {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.4rem;
+      }
+      .sb-desc {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.32);
+        line-height: 1.65;
+      }
+      .about-corporate {
+        padding: 8rem 6rem;
+        background: var(--off-white);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: center;
+      }
+      .corp-title {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 900;
+        line-height: 1.2;
+        letter-spacing: -0.03em;
+        color: var(--black);
+        margin-bottom: 1.5rem;
+      }
+      .corp-title span {
+        color: var(--blue);
+      }
+      .corp-body {
+        font-size: 0.95rem;
+        line-height: 1.9;
+        color: var(--gray);
+        margin-bottom: 2.5rem;
+      }
+      .corp-feats {
+        display: flex;
+        flex-direction: column;
+      }
+      .cf-row-item {
+        display: flex;
+        gap: 1.25rem;
+        padding: 1.5rem 0;
+        border-top: 1px solid var(--gray-lt);
+        align-items: flex-start;
+      }
+      .cfri-num {
+        width: 28px;
+        height: 28px;
+        background: var(--blue);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        font-weight: 800;
+        color: #fff;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+      }
+      .cfri-num.red {
+        background: var(--red);
+      }
+      .cfri-title {
+        font-size: 0.88rem;
+        font-weight: 700;
+        color: var(--black);
+        margin-bottom: 0.3rem;
+      }
+      .cfri-desc {
+        font-size: 0.77rem;
+        color: var(--gray);
+        line-height: 1.65;
+      }
+      .corp-visual {
+        background: #001f6b;
+        border-radius: 14px;
+        padding: 4rem 3rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .corp-visual::after {
+        content: "";
+        position: absolute;
+        right: -60px;
+        top: -60px;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(232, 25, 44, 0.25) 0%,
+          transparent 70%
+        );
+      }
+      .cv-label {
+        font-size: 0.58rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.3);
+        margin-bottom: 2rem;
+      }
+      .cv-benefits {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+      }
+      .cv-item {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+      .cv-ico {
+        width: 38px;
+        height: 38px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: rgba(255, 255, 255, 0.7);
+      }
+      .cv-ico i[data-lucide] {
+        width: 18px;
+        height: 18px;
+      }
+      .cv-t {
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.2rem;
+      }
+      .cv-s {
+        font-size: 0.72rem;
+        color: rgba(255, 255, 255, 0.38);
+        line-height: 1.55;
+      }
+      @media (max-width: 960px) {
+        .story-section,
+        .about-why,
+        .about-corporate {
+          grid-template-columns: 1fr;
+          padding: 5rem 2rem;
+          gap: 3rem;
+        }
+        .story-sticky {
+          position: static;
+        }
+        .about-stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .clientele-section {
+          padding: 5rem 2rem;
+        }
+        .cl-cards {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .sector-strip {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (max-width: 600px) {
+        .cl-cards {
+          grid-template-columns: 1fr;
+        }
+        .sector-strip {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="logo"
+          ><img src="img/Group 2.png" alt="Smooth Transit Global"
+        /></a>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="about.html" class="nav-link active">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="contact.html" class="hdr-cta"
+            ><span>Get a Quote</span
+            ><i data-lucide="arrow-right" class="hdr-arrow"></i
+          ></a>
+          <button class="burger" id="burger">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <a href="index.html">Home</a><a href="services.html">Services</a>
+        <a href="about.html">About</a><a href="contact.html">Contact</a>
+        <a href="contact.html" class="mob-cta">Get a Quote</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero about-hero">
+        <div class="page-hero-bg about-hero-bg"></div>
+        <div class="page-hero-content about-hero-content">
+          <div class="section-eyebrow" data-aos="fade-up">
+            Aviation Consulting · Lagos
+          </div>
+          <h1 class="page-hero-title" data-aos="fade-up">
+            Who We <em>Are.</em>
+          </h1>
+          <p class="page-hero-sub" data-aos="fade-up">
+            A leading aviation consulting firm committed to the highest level of
+            personalized service — from start to finish.
+          </p>
+        </div>
+        <div class="page-hero-scroll-hint">
+          <span>Scroll to explore</span>
+          <div class="hint-line"></div>
+        </div>
+      </section>
+
+      <section class="story-section">
+        <div class="story-sticky">
+          <div class="section-eyebrow">About Us</div>
+          <h2 class="story-side-title">
+            Built on<br /><em>Trust &amp; Expertise</em>
+          </h2>
+          <div class="story-pillars">
+            <div class="story-pillar">
+              <div class="sp-ico"><i data-lucide="plane"></i></div>
+              <div class="sp-txt">International &amp; domestic expertise</div>
+            </div>
+            <div class="story-pillar">
+              <div class="sp-ico"><i data-lucide="lock"></i></div>
+              <div class="sp-txt">Strict privacy &amp; confidentiality</div>
+            </div>
+            <div class="story-pillar">
+              <div class="sp-ico"><i data-lucide="briefcase"></i></div>
+              <div class="sp-txt">Personalized service for every client</div>
+            </div>
+            <div class="story-pillar">
+              <div class="sp-ico"><i data-lucide="zap"></i></div>
+              <div class="sp-txt">Prompt response, always</div>
+            </div>
+          </div>
+        </div>
+        <div class="story-right">
+          <p class="story-lead">
+            We are committed to supplying the
+            <span class="blue">highest level of personalized service</span> and
+            the best trade values to our clients.
+          </p>
+          <p class="story-body">
+            Our travel consultants serve as your personal guides — advising you
+            on all the options available to you, often better than going
+            directly to an airline. We assist our clients in comprehending
+            travel complexities, giving them personal attention, expertise, and
+            exclusive advantages for all travel needs.
+          </p>
+          <p class="story-body">
+            Our expertise and prompt service translates into significant cost
+            and time savings. We offer unbiased advice on the best travel
+            arrangements to suit your specific requirements — whether it's a
+            business trip or a vacation.
+          </p>
+          <div class="story-highlight">
+            <p>
+              "We always assist our clients in getting the best value for money.
+              A very personal and professional service, delivered under strict
+              confidentiality — from start to finish."
+            </p>
+          </div>
+          <p class="story-body">
+            We keep our clients updated with the latest aviation intelligence —
+            especially where such information will give comfort and measurable
+            cost savings. Our commitment goes beyond booking; we handle every
+            complexity so your journey is completely seamless.
+          </p>
+        </div>
+      </section>
+
+      <div class="about-stats">
+        <div class="astat">
+          <div class="astat-n">
+            24<span class="r" style="font-size: 0.5em">/7</span>
+          </div>
+          <div class="astat-l">Always Available</div>
+        </div>
+        <div class="astat">
+          <div class="astat-n" style="color: var(--red)">100%</div>
+          <div class="astat-l">Confidentiality</div>
+        </div>
+        <div class="astat">
+          <div class="astat-n">
+            8<span class="r" style="font-size: 0.45em">+</span>
+          </div>
+          <div class="astat-l">Service Verticals</div>
+        </div>
+        <div class="astat">
+          <div class="astat-n" style="color: var(--red)">VIP</div>
+          <div class="astat-l">Protocol Standard</div>
+        </div>
+      </div>
+
+      <section class="about-why">
+        <div>
+          <div class="section-eyebrow">Why Choose Us</div>
+          <h2 class="about-why-title">
+            What Sets Us<br /><span class="r">Apart</span>
+          </h2>
+          <p class="about-why-sub">
+            Four pillars that define the Smooth Transit Global difference — and
+            why our clients return again and again.
+          </p>
+          <div class="why-quad">
+            <div class="wq-item">
+              <div class="wq-ico"><i data-lucide="clock"></i></div>
+              <div class="wq-title">Always On Call</div>
+              <div class="wq-body">
+                Our staff are reachable at any time to assist with planning your
+                travels.
+              </div>
+            </div>
+            <div class="wq-item">
+              <div class="wq-ico"><i data-lucide="lock"></i></div>
+              <div class="wq-title">Strict Privacy</div>
+              <div class="wq-body">
+                All client data treated under rigorous confidentiality
+                protocols.
+              </div>
+            </div>
+            <div class="wq-item">
+              <div class="wq-ico"><i data-lucide="zap"></i></div>
+              <div class="wq-title">Prompt Response</div>
+              <div class="wq-body">
+                We respond quickly to all requests and complaints without
+                exception.
+              </div>
+            </div>
+            <div class="wq-item">
+              <div class="wq-ico"><i data-lucide="trending-up"></i></div>
+              <div class="wq-title">Best Value</div>
+              <div class="wq-body">
+                We keep you updated on aviation intelligence that saves time and
+                cost.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="about-why-card">
+            <div class="awc-label">What You Benefit</div>
+            <div class="awc-title">More Than a Booking <span>Agent</span></div>
+            <ul class="awc-list">
+              <li>
+                <i data-lucide="check-circle"></i>Personal &amp; professional
+                service under strict confidentiality
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i>Best value for money on every
+                booking
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i>Significant cost &amp; time
+                savings through expertise
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i>Unbiased advice — better than
+                going direct to airlines
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i>Personal guides navigating all
+                travel complexities
+              </li>
+              <li>
+                <i data-lucide="check-circle"></i>Exclusive advantages for all
+                travel needs
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="clientele-section" id="clientele">
+        <div class="cl-bg-word">CLIENTS</div>
+        <div class="cl-header">
+          <div class="cl-eyebrow">Our Clientele</div>
+          <h2 class="cl-title">
+            Trusted by the<br /><span class="r">Best</span> in
+            <span class="b">Business</span>
+          </h2>
+          <p class="cl-sub">
+            From Fortune 500 multinationals to heads of state — serving
+            Nigeria's most distinguished organisations and individuals.
+          </p>
+        </div>
+        <div class="marquee-wrap">
+          <div class="m-track">
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>FedEx</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Guinness Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>MultiChoice Group</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Coca-Cola HBC</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Shell Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>MTN Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Nestlé Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>DHL Express</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Access Bank</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Total Energies</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>FedEx</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Guinness Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>MultiChoice Group</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Coca-Cola HBC</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Shell Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>MTN Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Nestlé Nigeria</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>DHL Express</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Access Bank</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Total Energies</span>
+            </div>
+          </div>
+        </div>
+        <div class="marquee-wrap">
+          <div class="m-track rev">
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Ambassadors &amp; Diplomats</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Traditional Rulers</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Government Functionaries</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Corporate Executives</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Religious Leaders</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Politicians</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Public Sector Orgs</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Private Sector Companies</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Ambassadors &amp; Diplomats</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Traditional Rulers</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Government Functionaries</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Corporate Executives</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Religious Leaders</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Politicians</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span><span>Public Sector Orgs</span>
+            </div>
+            <div class="m-chip">
+              <span class="m-chip-dot"></span
+              ><span>Private Sector Companies</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="cl-cards">
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(70, 130, 255, 0.12); color: #5b9fff"
+            >
+              <i data-lucide="truck"></i>
+            </div>
+            <div class="cc-name">FedEx</div>
+            <div class="cc-type">Logistics · Multinational</div>
+            <div class="cc-svc">
+              Executive travel, crew transfers &amp; cargo logistics
+              coordination
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(0, 120, 60, 0.15); color: #00b86a"
+            >
+              <i data-lucide="wine"></i>
+            </div>
+            <div class="cc-name">Guinness Nigeria</div>
+            <div class="cc-type">FMCG · Multinational</div>
+            <div class="cc-svc">
+              Corporate travel management &amp; VIP protocol for senior
+              leadership
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(232, 25, 44, 0.12); color: #e8192c"
+            >
+              <i data-lucide="tv-2"></i>
+            </div>
+            <div class="cc-name">MultiChoice</div>
+            <div class="cc-type">Media · Pan-African</div>
+            <div class="cc-svc">
+              Regional flight coordination, hotel reservations &amp; executive
+              transfers
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(250, 60, 20, 0.12); color: #fa3c14"
+            >
+              <i data-lucide="coffee"></i>
+            </div>
+            <div class="cc-name">Coca-Cola HBC</div>
+            <div class="cc-type">FMCG · Multinational</div>
+            <div class="cc-svc">
+              Group travel booking, visa facilitation &amp; airport ground
+              handling
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(255, 210, 0, 0.1); color: #f5c400"
+            >
+              <i data-lucide="landmark"></i>
+            </div>
+            <div class="cc-name">Ambassadors</div>
+            <div class="cc-type">Diplomatic Missions</div>
+            <div class="cc-svc">
+              Full VIP protocol, diplomatic documentation &amp; secure airport
+              transfers
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(0, 51, 160, 0.2); color: #4d8aff"
+            >
+              <i data-lucide="scale"></i>
+            </div>
+            <div class="cc-name">Govt Functionaries</div>
+            <div class="cc-type">Public Sector</div>
+            <div class="cc-svc">
+              Discreet travel coordination, protocol &amp; security escort
+              services
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="background: rgba(150, 80, 255, 0.12); color: #a97aff"
+            >
+              <i data-lucide="crown"></i>
+            </div>
+            <div class="cc-name">Traditional Rulers</div>
+            <div class="cc-type">Royal Institutions</div>
+            <div class="cc-svc">
+              VIP meet &amp; assist, security escorts &amp; dignified travel
+              arrangements
+            </div>
+          </div>
+          <div class="cl-card">
+            <div
+              class="cc-badge"
+              style="
+                background: rgba(255, 255, 255, 0.05);
+                color: rgba(255, 255, 255, 0.5);
+              "
+            >
+              <i data-lucide="cross"></i>
+            </div>
+            <div class="cc-name">Clergies</div>
+            <div class="cc-type">Religious Leaders</div>
+            <div class="cc-svc">
+              Respectful, comprehensive travel &amp; logistics support for faith
+              leaders
+            </div>
+          </div>
+        </div>
+
+        <div class="sector-strip">
+          <div class="sector-box">
+            <div class="sb-icon"><i data-lucide="building-2"></i></div>
+            <div class="sb-name">Multinationals</div>
+            <div class="sb-desc">
+              Full-service travel programs for international corporations in
+              Nigeria
+            </div>
+          </div>
+          <div class="sector-box">
+            <div class="sb-icon"><i data-lucide="landmark"></i></div>
+            <div class="sb-name">Public Sector</div>
+            <div class="sb-desc">
+              Government agencies, ministries &amp; public institutions
+            </div>
+          </div>
+          <div class="sector-box">
+            <div class="sb-icon"><i data-lucide="briefcase"></i></div>
+            <div class="sb-name">Private Sector</div>
+            <div class="sb-desc">
+              Nigerian &amp; regional businesses requiring corporate travel
+              management
+            </div>
+          </div>
+          <div class="sector-box">
+            <div class="sb-icon"><i data-lucide="user-check"></i></div>
+            <div class="sb-name">HNW Individuals</div>
+            <div class="sb-desc">
+              Discreet white-glove personal travel service for private clients
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-corporate">
+        <div>
+          <div class="section-eyebrow">Corporate Solutions</div>
+          <h2 class="corp-title">
+            A Dedicated Travel Office<br />for Your <span>Organisation</span>
+          </h2>
+          <p class="corp-body">
+            We can set up a comprehensive Logistics, Protocol and Travelling
+            Office for corporate clients — and manage it entirely on an
+            outsourcing basis.
+          </p>
+          <div class="corp-feats">
+            <div class="cf-row-item">
+              <div class="cfri-num">1</div>
+              <div>
+                <div class="cfri-title">Full Infrastructure Setup</div>
+                <div class="cfri-desc">
+                  A complete travel &amp; logistics office built to your
+                  operations
+                </div>
+              </div>
+            </div>
+            <div class="cf-row-item">
+              <div class="cfri-num red">2</div>
+              <div>
+                <div class="cfri-title">Fully Outsourced Management</div>
+                <div class="cfri-desc">
+                  Our team runs your travel office — reducing overheads &amp;
+                  friction
+                </div>
+              </div>
+            </div>
+            <div class="cf-row-item">
+              <div class="cfri-num">3</div>
+              <div>
+                <div class="cfri-title">Unbiased Travel Advisory</div>
+                <div class="cfri-desc">
+                  No airline bias — best arrangements for every trip
+                </div>
+              </div>
+            </div>
+            <div class="cf-row-item">
+              <div class="cfri-num red">4</div>
+              <div>
+                <div class="cfri-title">Measurable Cost Savings</div>
+                <div class="cfri-desc">
+                  Expertise that consistently delivers significant savings
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="corp-visual">
+            <div class="cv-label">Key Benefits</div>
+            <div class="cv-benefits">
+              <div class="cv-item">
+                <div class="cv-ico"><i data-lucide="clipboard-list"></i></div>
+                <div>
+                  <div class="cv-t">Comprehensive Logistics Office</div>
+                  <div class="cv-s">
+                    Protocol, travel, and logistics under one roof for your
+                    company
+                  </div>
+                </div>
+              </div>
+              <div class="cv-item">
+                <div class="cv-ico"><i data-lucide="handshake"></i></div>
+                <div>
+                  <div class="cv-t">Managed on Your Behalf</div>
+                  <div class="cv-s">
+                    Fully operated and staffed by Smooth Transit professionals
+                  </div>
+                </div>
+              </div>
+              <div class="cv-item">
+                <div class="cv-ico"><i data-lucide="piggy-bank"></i></div>
+                <div>
+                  <div class="cv-t">Best Value Procurement</div>
+                  <div class="cv-s">
+                    Industry relationships mean you always get competitive rates
+                  </div>
+                </div>
+              </div>
+              <div class="cv-item">
+                <div class="cv-ico"><i data-lucide="globe"></i></div>
+                <div>
+                  <div class="cv-t">International &amp; Domestic</div>
+                  <div class="cv-s">
+                    Seamless coordination across all routes and destinations
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="site-footer" id="site-footer">
+        <div class="footer-glow" id="footer-glow"></div>
+        <div class="footer-watermark">Smooth Transit</div>
+        <div class="footer-cta">
+          <div class="footer-divider-line"></div>
+          <h2 class="cta-heading">
+            <span class="word">Ready</span> <span class="word">to</span>
+            <span class="word">fly</span><br /><span class="line-accent"
+              ><span class="word">smarter?</span></span
+            >
+          </h2>
+          <div class="cta-right">
+            <p class="cta-sub">
+              From executive travel to full aviation logistics — we handle every
+              detail, at any hour.
+            </p>
+            <div class="cta-btn-wrap" id="cta-btn-wrap">
+              <a href="contact.html" class="cta-btn"
+                ><span>Get in Touch</span
+                ><svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M3 8h10M9 4l4 4-4 4" /></svg
+              ></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col footer-col--brand">
+            <div class="brand-logo">
+              <span class="brand-logo-dot"></span>Smooth Transit Global
+            </div>
+            <p class="brand-desc">
+              A leading aviation consulting firm delivering precision travel
+              solutions for executives, diplomats, and corporations across the
+              globe.
+            </p>
+            <div class="social-row">
+              <a href="#" class="social-link">in</a
+              ><a href="#" class="social-link">𝕏</a
+              ><a href="#" class="social-link">ig</a
+              ><a href="#" class="social-link">fb</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Services</p>
+            <ul class="col-links">
+              <li><a href="services.html">Flight &amp; Ticketing</a></li>
+              <li><a href="services.html">VIP Protocol</a></li>
+              <li><a href="services.html">Meet &amp; Assist</a></li>
+              <li><a href="services.html">Security Escort</a></li>
+              <li><a href="services.html">Aviation Logistics</a></li>
+              <li><a href="services.html">Hotel &amp; Car Hire</a></li>
+              <li><a href="services.html">Visa Facilitation</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Company</p>
+            <ul class="col-links">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="index.html#why">Why Choose Us</a></li>
+              <li><a href="about.html#clientele">Our Clients</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <p class="col-label">Contact</p>
+            <div class="contact-item">
+              <p class="contact-item-label">Phone</p>
+              <a href="tel:+234XXXXXXXXXX" class="contact-item-val"
+                >+234 XXX XXXX XXXX</a
+              >
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Email</p>
+              <a href="mailto:info@smoothtransit.com" class="contact-item-val"
+                >info@smoothtransit.com</a
+              >
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Location</p>
+              <span class="contact-item-val">Lagos, Nigeria</span>
+            </div>
+            <div class="contact-item">
+              <p class="contact-item-label">Operations</p>
+              <span
+                class="contact-item-val"
+                style="color: rgba(26, 111, 232, 0.9); font-weight: 600"
+                >24 / 7 — Always On</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="footer-ticker">
+          <div class="ticker-track" id="ticker-track">
+            <span class="ticker-item"
+              ><span class="ticker-dot"></span>Flight Management</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>VIP Protocol Services</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>24/7 Operations</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Executive Aviation</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Diplomatic Travel</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Ground Logistics</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Confidential &amp; Discreet</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Global Reach</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Flight Management</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>VIP Protocol Services</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>24/7 Operations</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Executive Aviation</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Diplomatic Travel</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Ground Logistics</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Confidential &amp; Discreet</span
+            ><span class="ticker-item"
+              ><span class="ticker-dot"></span>Global Reach</span
+            >
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-copy">
+            © <span id="footer-year">2025</span> Smooth Transit Global Services.
+            <span>All rights reserved.</span>
+          </p>
+          <div class="flight-path">
+            <span class="flight-icon">✈</span
+            ><span>Lagos · London · Dubai · New York</span>
+          </div>
+          <nav class="footer-legal">
+            <a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+            ><a href="#">Cookie Policy</a>
+          </nav>
+        </div>
+      </footer>
+    </main>
+    <div class="custom-scrollbar">
+      <div class="custom-scrollbar-thumb" id="scrollThumb"></div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          once: true,
+          duration: 800,
+          easing: "ease-out-cubic",
+        });
+      });
+    </script>
+  </body>
+</html>
