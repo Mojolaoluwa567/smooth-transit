@@ -233,7 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroSub = document.querySelector(".hero-sub");
   const heroCta = document.querySelector(".hero-ctas");
   const heroSta = document.querySelector(".hero-stats");
-  [heroTag, heroSub, heroCta, heroSta].forEach((el, i) => {
+  const heroImgi = document.querySelector(".hero-bg-img");
+  [heroTag, heroSub, heroCta, heroSta, heroImgi].forEach((el, i) => {
     if (!el) return;
     el.style.opacity = "0";
     el.style.transform = "translateY(20px)";
